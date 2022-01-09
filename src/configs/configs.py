@@ -1,5 +1,6 @@
 from os.path import dirname, realpath, join
 from typing import Optional
+import logging
 
 from pydantic import BaseSettings
 
@@ -14,3 +15,17 @@ class Configs(BaseSettings):
 
 
 configs = Configs()
+
+
+LOG_CONFIGS = {
+    "filename": "data-processor.log",
+    "filemode": "a",
+    "format": (
+        "%(asctime)s "
+        "[%(levelname)s] "
+        "%(module)s-%(lineno)s-%(name)s: "
+        "%(message)s"
+    ),
+    "level": logging.INFO,
+    "datefmt": "%Y-%m-%dT%H:%M:%S%z",
+}
