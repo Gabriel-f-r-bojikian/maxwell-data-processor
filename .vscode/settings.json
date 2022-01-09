@@ -8,7 +8,6 @@
 	"python.linting.pycodestyleEnabled": false,
 	"python.linting.banditEnabled": false,
 	"git.ignoreLimitWarning": true,
-	"python.pythonPath": "venv/bin/python",
 	"material-icon-theme.files.associations": {
 		"migrations": "tools"
 	},

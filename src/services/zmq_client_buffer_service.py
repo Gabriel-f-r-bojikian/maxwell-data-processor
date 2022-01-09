@@ -1,19 +1,5 @@
-from typing import List, NamedTuple
-from datetime import datetime
-
-from py_types import ZeroMQMsg
-from processes import FFT_PROCESS_QUEUE
-
-
-class Buffer(NamedTuple):
-    dt: List[datetime]
-    VA: List[float]
-    VB: List[float]
-    VC: List[float]
-    IA: List[float]
-    IB: List[float]
-    IC: List[float]
-
+from py_types import Buffer, ZeroMQMsg
+from internal_queues import FFT_PROCESS_QUEUE
 
 ZMQ_CLIENT_BUFFER = Buffer(
     dt=[],

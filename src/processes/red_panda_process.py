@@ -1,7 +1,4 @@
-import multiprocessing as mp
-
-
-PARSED_DATA_QUEUE = mp.Queue()
+from internal_queues import PARSED_DATA_QUEUE
 
 
 def red_panda_process():

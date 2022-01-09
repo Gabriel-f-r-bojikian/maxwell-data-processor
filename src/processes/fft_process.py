@@ -1,12 +1,8 @@
-import multiprocessing as mp
-
+from internal_queues import FFT_PROCESS_QUEUE
 from services import (
     fft_data_analysis_service,
     send_parsed_data_service,
 )
-
-
-FFT_PROCESS_QUEUE = mp.Queue()
 
 
 def fft_process():

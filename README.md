@@ -1,4 +1,4 @@
-# RQS Argos - Extractor Setup
+# Maxwell
 
 ## Linux: Debian
 
@@ -28,7 +28,22 @@ pip install --upgrade cython
 pip install wheel
 pip install -r dev-requirements.txt
 ```
+## Windows
 
+Inside the folder ./, copy and paste on command line
+
+```bat
+python -m venv venv
+.\venv\Scripts\activate
+```
+Then copy and paste
+
+```bat
+python -m pip install --upgrade pip
+pip install --upgrade cython
+pip install wheel
+pip install -r dev-requirements.txt
+```
 ## Run program
 
 ```shell
