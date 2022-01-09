@@ -1,8 +1,16 @@
 from typing import TypedDict
+from datetime import datetime
 
 
 class ZeroMQMsgBody(TypedDict):
-    pass
+    dt: datetime
+    VA: float
+    VB: float
+    VC: float
+    IA: float
+    IB: float
+    IC: float
+    freq: float
 
 
 class ZeroMQMsg(TypedDict):
