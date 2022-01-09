@@ -1,0 +1,22 @@
+{
+	"editor.formatOnSave": true,
+	"python.formatting.provider": "black",
+	"python.linting.lintOnSave": true,
+	"python.linting.enabled": true,
+	"python.linting.flake8Enabled": true,
+	"python.linting.pylintEnabled": false,
+	"python.linting.pycodestyleEnabled": false,
+	"python.linting.banditEnabled": false,
+	"git.ignoreLimitWarning": true,
+	"python.pythonPath": "venv/bin/python",
+	"material-icon-theme.files.associations": {
+		"migrations": "tools"
+	},
+	"python.analysis.typeCheckingMode": "basic",
+	"editor.wordWrapColumn": 88,
+	"editor.wordWrap": "wordWrapColumn",
+	"python.analysis.extraPaths": [
+		"src"
+	],
+	"python.analysis.autoSearchPaths": false
+}

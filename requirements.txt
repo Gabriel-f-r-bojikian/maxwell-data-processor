@@ -1,0 +1,5 @@
+# Queues
+zmq
+# FFT
+numpy
+# PostgreSQL / Red Panda
