@@ -1,0 +1,19 @@
+[Unit]
+Description=Maxwell Data Processor daemon
+# Need this services (can start simultaneously)
+Wants=network.target
+# If the 'Wants' services don't work, this services won't work either
+Requires=network.target
+# If 'Wants' services works, then start this service
+After=network.target
+
+[Service]
+User=dev_svc_rqs
+Type=simple
+WorkingDirectory=/opt/maxwell/data-processor
+ExecStart=/opt/maxwell/data-processor/data_processor_entrypoint.sh
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
