@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from py_types import Buffer, ZeroMQMsg
 from internal_queues import FFT_PROCESS_QUEUE
 
@@ -10,9 +12,15 @@ ZMQ_CLIENT_BUFFER = Buffer(
     IB=[],
     IC=[],
 )
+FORMAT = "%Y-%m-%d %H:%M:%S"
 
 
 def zmq_client_buffer_service(msg: ZeroMQMsg):
+    dt = msg["msg_body"]["dt"]
+    print(
+        f"[{datetime.now().strftime(FORMAT)}]"
+        f"Length: {str(len(ZMQ_CLIENT_BUFFER.VA)).zfill(2)} | Receiving: {dt}"
+    )
     ZMQ_CLIENT_BUFFER.dt.append(msg["msg_body"]["dt"])
     ZMQ_CLIENT_BUFFER.VA.append(msg["msg_body"]["VA"])
     ZMQ_CLIENT_BUFFER.VB.append(msg["msg_body"]["VB"])
