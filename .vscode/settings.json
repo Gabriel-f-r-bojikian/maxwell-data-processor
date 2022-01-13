@@ -15,6 +15,7 @@
 	"editor.wordWrapColumn": 88,
 	"editor.wordWrap": "wordWrapColumn",
 	"python.analysis.extraPaths": [
+		// "clients"
 		"src"
 	],
 	"python.analysis.autoSearchPaths": false
