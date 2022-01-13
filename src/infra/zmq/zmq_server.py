@@ -2,8 +2,8 @@
 from typing import Callable, Optional
 import logging
 import json
+from time import sleep
 
-# from time import sleep
 
 import zmq
 
@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 
 MSG_TYPES = {
-    # "test": bytes("Test", "utf-8"),
+    "generated": bytes("Received Generated Data", "utf-8"),
 }
 
 
@@ -70,6 +70,7 @@ class ZMQServer:
             self._handle(client_request_b)
             return
 
-        while client_request_b := self.socket.recv():
+        while True:
+            client_request_b = self.socket.recv()
             self._handle(client_request_b)
-            # sleep(0.1)
+            sleep(0.1)
