@@ -26,6 +26,6 @@ LOG_CONFIGS = {
         "%(module)s-%(lineno)s-%(name)s: "
         "%(message)s"
     ),
-    "level": logging.INFO,
+    "level": logging.DEBUG,
     "datefmt": "%Y-%m-%dT%H:%M:%S%z",
 }
