@@ -9,9 +9,10 @@
 			"type": "python",
 			"request": "launch",
 			"program": "${workspaceFolder}/src/main.py",
+			// "program": "${workspaceFolder}/servers/broadcast_generated_power_line_data.py",
 			"console": "integratedTerminal",
 			"args": [
-				""
+				"1.0"
 			]
 			// "envFile": "${workspaceFolder}/configs/.env"
 		}
