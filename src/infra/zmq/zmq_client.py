@@ -1,8 +1,8 @@
 # import time
+import os
 from typing import Callable, Optional
 import logging
 import json
-from time import sleep
 
 
 import zmq
@@ -20,8 +20,8 @@ MSG_TYPES = {
 class ZMQClient:
     def __init__(
         self,
-        ipv4: str = "127.0.0.1",
-        port: str = "5555",
+        ipv4: str = os.environ["ZMQ_SUBS_IPV4"],  # "127.0.0.1",
+        port: str = os.environ["ZMQ_SUBS_PORT"],
         callback: Optional[Callable] = None,
         args: tuple = (),
         kwargs: dict = {},
