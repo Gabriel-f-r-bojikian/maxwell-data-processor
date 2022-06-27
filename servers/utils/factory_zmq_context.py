@@ -1,3 +1,4 @@
+import os
 from typing import Tuple
 
 import zmq
@@ -7,8 +8,8 @@ from py_types import ZeroMQDsn
 
 
 def factory_zmq_context(
-    ipv4: str = "127.0.0.1",
-    port: str = "5555",
+    ipv4: str = os.environ["ZMQ_PUB_IPV4"],  # "0.0.0.0",
+    port: str = os.environ["ZMQ_PUB_PORT"],
 ) -> Tuple[Context, Socket]:
     try:
         cnxn_str = ZeroMQDsn.build(ipv4, port)
